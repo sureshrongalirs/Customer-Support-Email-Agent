@@ -1,0 +1,108 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "customer-support-email-agent"
+version = "0.1.0"
+description = "A LangGraph-based intelligent customer support email agent"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [
+    {name = "Your Name", email = "sureshdataeng1@gmail.com"}
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Web Environment",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Internet :: WWW/HTTP",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+keywords = ["langraph", "fastapi", "email", "support", "ai", "openai"]
+dependencies = [
+    "python-dotenv==1.0.0",
+    "fastapi==0.104.1",
+    "uvicorn==0.24.0",
+    "langgraph==0.0.40",
+    "langchain==0.1.0",
+    "langchain-openai==0.0.5",
+    "pydantic==2.5.0",
+    "pydantic-settings==2.1.0",
+    "httpx==0.25.2",
+    "openai==1.3.8",
+    "python-multipart==0.0.6",
+    "aiohttp==3.9.1",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest==7.4.3",
+    "pytest-asyncio==0.21.1",
+    "black==23.12.0",
+    "ruff==0.1.8",
+    "mypy==1.7.1",
+]
+docs = [
+    "mkdocs==1.5.3",
+    "mkdocs-material==9.4.14",
+]
+
+[project.urls]
+Repository = "https://github.com/yourusername/customer-support-email-agent"
+Documentation = "https://github.com/yourusername/customer-support-email-agent#readme"
+Issues = "https://github.com/yourusername/customer-support-email-agent/issues"
+
+[tool.setuptools]
+packages = ["src"]
+
+[tool.black]
+line-length = 100
+target-version = ["py311", "py312"]
+include = '\.pyi?$'
+extend-exclude = '''
+/(
+    \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+  | venv
+)/
+'''
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+select = [
+    "E",    # pycodestyle errors
+    "W",    # pycodestyle warnings
+    "F",    # pyflakes
+    "I",    # isort
+    "C",    # flake8-comprehensions
+    "B",    # flake8-bugbear
+]
+ignore = [
+    "E501",  # line too long, handled by black
+    "C901",  # complexity
+]
+
+[tool.mypy]
+python_version = "3.11"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = false
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py", "*_test.py"]
+asyncio_mode = "auto"

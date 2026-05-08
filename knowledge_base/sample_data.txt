@@ -1,0 +1,71 @@
+Customer Support Knowledge Base - Sample Data
+
+This file contains sample reference data for the customer support agent.
+Replace with your actual knowledge base content.
+
+===== CATEGORIES =====
+
+1. Billing Issues
+   - Payment problems
+   - Invoice inquiries
+   - Subscription management
+   - Refund requests
+
+2. Technical Support
+   - Software bugs
+   - Installation issues
+   - Integration problems
+   - Performance concerns
+
+3. General Inquiries
+   - Product information
+   - Feature explanations
+   - Account information
+   - Service overview
+
+4. Feature Requests
+   - Enhancement suggestions
+   - New capability requests
+   - Integration requests
+
+5. Complaints
+   - Service quality issues
+   - Unmet expectations
+   - Negative experiences
+
+===== COMMON ISSUES & SOLUTIONS =====
+
+Issue: Unable to login
+Solution: Clear browser cache and cookies, then try again. If problem persists, reset password using "Forgot Password" link.
+
+Issue: Payment failed
+Solution: Verify card details, check expiration date, and ensure sufficient funds. Try a different payment method if available.
+
+Issue: Slow performance
+Solution: Check internet connection speed, clear browser cache, disable browser extensions, and contact support if issue persists.
+
+===== COMPANY INFORMATION =====
+
+Company: [Your Company Name]
+Website: [Your Website]
+Support Email: support@company.com
+Support Hours: Monday-Friday, 9 AM - 5 PM (EST)
+Phone: [Your Phone Number]
+
+===== RESPONSE GUIDELINES =====
+
+1. Always be professional and courteous
+2. Acknowledge the customer's concern
+3. Provide clear and concise solutions
+4. Offer follow-up support if needed
+5. Thank the customer for their patience
+
+===== ESCALATION CRITERIA =====
+
+Escalate to human agent if:
+- Issue is critical/urgent
+- Customer is highly frustrated
+- Issue requires specialized expertise
+- Multiple failed resolution attempts
+- Legal or compliance concerns
+

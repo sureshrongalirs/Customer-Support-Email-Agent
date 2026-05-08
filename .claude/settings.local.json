@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(cd \"D:\\\\Projects\\\\Claude\\\\Customer Support Email Agent\"; Write-Host \"Current directory: $\\(Get-Location\\)\"; Write-Host \"Checking venv...\"; Test-Path \".\\\\venv\\\\Scripts\\\\Activate.ps1\"; Write-Host \"Running activation...\"; & \".\\\\venv\\\\Scripts\\\\Activate.ps1\"; Write-Host \"Success! Now run: pip install -r requirements.txt\")",
+      "PowerShell(cd \"D:\\\\Projects\\\\Claude\\\\Customer Support Email Agent\"; Get-ChildItem -Recurse -Exclude venv,.git -File | Select-Object -ExpandProperty FullName | ForEach-Object { $_.Replace\\(\\(Get-Location\\).Path, \".\"\\) } | Sort-Object | head -50)",
+      "Bash(timeout 15 python -m uvicorn src.main:app --host 0.0.0.0 --port 8000)",
+      "Bash(timeout 20 python -m uvicorn src.main:app --host 0.0.0.0 --port 8000)",
+      "Bash(python -m src.main)",
+      "Bash(Start-Sleep -Seconds 3)",
+      "Bash(curl -X POST http://localhost:8000/api/v1/emails/process -H \"Content-Type: application/json\" -d '{\"sender\":\"test@example.com\",\"subject\":\"I cannot login\",\"body\":\"I am having trouble accessing my account\"}')",
+      "Bash(curl -s -X POST http://localhost:8000/api/v1/emails/process -H 'Content-Type: application/json' -d '{\"sender\":\"test@example.com\",\"subject\":\"I cannot login\",\"body\":\"I am having trouble accessing my account\"}')"
+    ]
+  }
+}
