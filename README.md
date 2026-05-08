@@ -54,7 +54,7 @@ This project implements an automated customer support system that:
 
 1. **Clone or navigate to the project directory**
    ```bash
-   cd "d:\Projects\Claude\Customer Support Email Agent"
+   cd "d:Customer Support Email Agent"
    ```
 
 2. **Create a virtual environment**
